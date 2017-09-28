@@ -1,0 +1,151 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{font-family:"微软雅黑"; font-size:1em; padding:0; border:0; margin:0; background:#fff; overflow-x:hidden;}
+img,h1,h2,h3,ul,li,dl,dt,dd,p,a{margin:0; padding:0; border:0; list-style:none; text-decoration:none;}/* CSS Document */
+.clear{clear:both;}
+.fl{float: left;}
+.fr{float: right;}
+
+/*积分商城*/
+.jfsc_banner{width:100%;}
+.jfsc_banner img{width:100%;}
+.jfsc_merit{ margin-top:3%;}
+.jfsc_merit li{width:33.3%; float:left; text-align:center;}
+.jfsc_merit li img{width:95%;}
+.jfg h3{border-bottom:1px solid #e81b1f; border-top:1px solid #d6d6d6; height:30px; line-height:30px; padding-left:4%; font-size:1em; color:#e81b1f;}
+.jfg_ul{padding:30px 0; margin-bottom:10px; border-bottom:1px solid #d6d6d6;}
+.jfg_ul li{float:left; width:30%; margin-left: 2.5%;text-align:center;}
+.jfg_ul li p{ padding:5% 5% 0 5%; line-height:20px; color:#000; text-align:left; min-width:10px; margin:0 auto; font-size:12px; display:inline-block;}
+.jfg_ul li p a{color:#000;}
+.jfg_ul li p a span{color:#d40a0e; font-weight:bold;}
+.jfg_ul li p a em{font-style:normal; color:#9d9d9d;}
+.jfg_ul li img{width:50%;}
+
+/*赚积分*/
+.zjf_banner img{display:block;}
+.dhjp{height:22px; line-height:22px; background:#f6403c; font-weight:bold; text-align:center; color:#fff; font-size:0.8em}
+.zjf_zc{width:100%; padding:5% 0 4% 0;}
+.zjf_zc_l{float:left; width:47%; padding-left:3%;}
+.zjf_zc_l img{width:97%;}
+.zjf_zc_r{float:right; width:47%; padding-right:3%; text-align:right;}
+.zjf_zc_r img{width:90%;}
+.kfrx{height:50px; line-height:50px; color:#fff; font-weight:bold; background:#f6403c url(zjf_img03.png)/*tpa=http://www.zfax.cn/site/themes/default/style/images/zjf_img03.png*/ center center no-repeat; font-size:1em; text-align:center;}
+.kfrx span{font-size:1.5em; font-family:Arial, Helvetica, sans-serif; padding-left:10px;}
+.zjf_box{width:90%; margin:2% auto 0; border-radius:15px; padding:2% 3% 3% 3%; background:#fef5cc url(zjf_img05.png)/*tpa=http://www.zfax.cn/site/themes/default/style/images/zjf_img05.png*/ right bottom no-repeat;}
+.zjf_box h3{ width:140px; height:30px; line-height:30px; background:#f7403e; text-align:center; color:#fff; font-size:1em;}
+.zjf_box_p{ font-size:1em; color:#000; line-height:26px;}
+.zjf_box_p span{ font-weight:bold; padding-top:2%; display:block;}
+.zjf_box02{background:none; background:#fef5cc;}
+.xun{ width:93%; margin:0 auto; padding:3% 0 3% 0;}
+.zjf_box_p02{padding-top:2%; }
+.xun img{width:100%;}
+
+/*会员尊享*/
+.hyzx_tag{height:67px; line-height:67px; background:#f0f0f0; border-bottom:1px solid #d1d5d8; padding-left:18%; color:#020100; }
+.hyzx_tag p{display:inline-block; border-bottom:6px solid #e61e25; font-size:1.2em; height:61px;}
+.hyzx_tag span{ font-size:0.8em; padding-left:10%;}
+.hyzy_merit{margin:5% 0 2% 0;}
+.hyzy_merit li{width:46%; float:left; text-align:right;}
+.hyzy_merit li+li{ float:right; text-align:left;}
+.hyzy_merit li img{width:70%;}
+.hyzx_news{width:90%; padding-left:10%; padding-top:5%;}
+.hyzx_news_tag{ font-size:1.125em; color:#333333; line-height:40px; height:40px; background:url(hyzx_img07.png)/*tpa=http://www.zfax.cn/site/themes/default/images/mobile/images/hyzx_img07.png*/ left bottom no-repeat; padding-left:5%; margin-bottom:3%;}
+.hyzx_news_l{width:16%; float:left; text-align:center;}
+.hyzx_news_l img{width:50%; padding-top:10%; height:100%}
+.hyzx_news_r{width:82%; float:left; position:relative; padding-left:5%; margin-left:5%; border-left:1px dashed #e4e4e4;}
+.hyzx_news_r li{height:47px; line-height:47px; border-bottom:1px solid #f2f1f4; background:url(hyzx_img09.png)/*tpa=http://www.zfax.cn/site/themes/default/images/mobile/images/hyzx_img09.png*/ left center no-repeat; font-size:0.8em; padding-left:2%;}
+.hyzx_news_r li span{width:60%; float:left; overflow:hidden; height:47px;}
+.hyzx_news_r li a{ color:#4d4c4c;}
+.hyzx_news_r li a i{color:#b70002; font-style:normal;}
+.hyzx_news_r li a em{font-style:normal; float:right; padding-right:20%;}
+.more{font-size:0.8em; line-height:30px; height:30px; padding-left:75%;}
+.more a{ color:#428bca;}
+.hyzx_news02{padding-top:0;}
+.hyzx_news_r img{width:9%;}
+.hyzx_news_r_img01{position:absolute; top:0; left:-5%;}
+.hyzx_news_r_img02{position:absolute; top:29%; left:-5%;}
+.hyzx_news_r_img03{position:absolute; top:58%; left:-5%;}
+.hyzx_news_r_img04{position:absolute; bottom:0; left:-5%;}
+
+/*最新活动*/
+.zxhd_body{width:96%;text-align: center;margin:0 auto;overflow:hidden;}
+.zxhd_body img{width:100%;}
+.zxhd_body p img{width:100%;position:relative;left:-28px;}
+
+/*一键购买*/
+.yjgm img{width:100%;}
+.yjgm_p{padding-left:25%; font-size:1.125em; color:#57a85b; padding-top:10px;}
+.yjgm_p img{width:7%; margin:0 10px -5px 0;}
+.yjgm_btn{ margin:0 auto; text-align:center;}
+.yjgm_btn a{ padding:3% 10%;line-height:60px; background:#dc4238; border-radius:5px; font-size:2em; color:#fff; text-align:center;margin-top:20px; border:0; cursor:pointer;}
+.yjgm_sy{width:60%; height:160px; border:3px solid #57a85b; border-radius:15px; margin:20px auto 20%;}
+.yjsy_sy_p{border-top:20px solid #57a85b; border-top-left-radius:11px; border-top-right-radius:11px; font-size:2em; color:#57a85b; text-align:center; line-height:60px;}
+.yjgm_sy_p02{text-align:center; margin:0 auto; width:65%;}
+.yjgm_sy_p02 span{font-size:2.5em; color:#e73808; line-height:30px;}
+.yjgm_sy_p03{font-size:0.5em; color:#fee8a2; padding:20% 15% 10% 15%; background:url(yjgm_img03.png)/*tpa=http://www.zfax.cn/site/themes/default/images/mobile/images/yjgm_img03.png*/ no-repeat; background-size:100% 100%; text-align:left; line-height:12px; }
+.yjgm_sy_p03_btn{ font-size:0.68em; margin:5px 2px 0 0;color:#6900b0; background:#fbed16; border:2px solid #fbed16; cursor:pointer;}
+.yjgm_sy_p03_btn02{ background:none; color:#fee8a2;}
+
+/*公司优势*/
+.gsys_img{padding-top:20px;}
+.gsys_img img{width:100%;}
+.gsys_p{font-size:12px; padding:5% 10%; line-height:20px;}
+.gsys_img03{ text-align:center;}
+.gsys_img03 img{width:80%; padding:5% 0;}
+
+/*风控优势*/
+.fkys_img img{width:100%;}
+.fkys_tx{margin-left:27.2%; border-left:2px solid #e5e5e5; width:60%; padding-bottom: 20px;}
+.fkys_tx01{font-size:12px; color:#020000; margin-left:-17%; padding-top:5%;}
+.fkys_tx01 img{float:left; width:20%; margin-right:5%}
+.fkys_tx01 p{float:left; width:75%;}
+.fkys_tx02{margin-left:-11%;}
+
+
+
+
+@media screen (min-width:460px) and (max-width:670px){
+		.hyzx_news_r li{height:44px; line-height:44px;}
+		.hyzx_news_r li a em{padding-right:5%;}
+		.more{padding-left:87%;}
+		.yjgm_sy{ margin-bottom:80px;}
+	}
+@media screen and (min-width:381px) and (max-width:460px){
+		body{ font-size:0.8em;}
+		.hyzx_news_r li{height:28px; line-height:28px;}
+		.hyzx_news_r li span{height:28px;}
+		.hyzx_tag{height:40px; line-height:40px;}
+		.hyzx_tag p{height:34px;}
+		.yjgm_sy{ margin-bottom:120px;}
+	}
+
+@media screen and (max-width:380px){
+		body{ font-size:0.8em;}
+		.hyzx_tag{height:40px; line-height:40px;}
+		.hyzx_tag p{height:34px;}
+		.hyzx_news_r li{height:24px; line-height:24px;}
+		.hyzx_news_r li span{height:24px;}
+		.kfrx{height:30px; line-height:30px; font-size:0.9em;}
+		.kfrx span{font-size:1.1em;}
+		.hyzx_news{width:95%; padding-left:5%; padding-top:5%;}
+		.yjgm_sy{ margin-bottom:120px;}
+	}
+	
+@media screen and (max-width:320px){
+		.yjgm_sy{width:80%;}
+		.yjgm_sy{ margin-bottom:120px;}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+

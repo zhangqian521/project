@@ -1,0 +1,11 @@
+@charset "utf-8";
+/*初始化*/
+
+body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,form,input,dl,dt,dd{ margin:0; padding:0;}
+ body{ font-family:"微软雅黑"; font-size:12px; color:#747474; line-height:1.7;background:#f4f6f6;}
+ ul,ol{ list-style:none;}
+ img{  border:none;}
+ a{ color:#666; text-decoration:none;}
+.clear{ height:0; overflow:hidden; clear:both}
+input:focus{ outline:none}
+

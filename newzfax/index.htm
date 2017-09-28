@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<title>Document</title>
+	<link type="text/css" rel="stylesheet" href="css/index.css" />
+	<link type="text/css" rel="stylesheet" href="css/form.css" />
+	<link type="text/css" rel="stylesheet" href="css/index3.css" />
+	<link type="text/css" rel="stylesheet" href="css/header.css" />
+	<link type="text/css" rel="stylesheet" href="css/banner.css" />
+	<link type="text/css" rel="stylesheet" href="css/footer.css" />
+	
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/primefaces.js"></script>
+	<script type="text/javascript" src="js/jsf.js"></script>
+	<script type="text/javascript" src="js/duice.js" ></script>
+	<script src="js/jquery.DB_tabMotionBanner.min.js"></script>
+	<script type="text/javascript" src="js/lrtk.js"></script>
+	<script type="text/javascript" src="js/ts.js"></script>
+</head>
+<body>
+	
+	<div class="head-con">
+		<div class="head">
+			<div class="left">
+				<script>
+					var myDate = new Date();
+					var y = myDate.getFullYear();    //获取完整的年份(4位,1970-????)
+					var m = myDate.getMonth();       //获取当前月份(0-11,0代表1月)
+					var d =	myDate.getDate(); 
+					var mm = myDate.getDay();    //星期
+					document.write("今天是"+y+"年"+(m+1)+"月"+d+"日");
+				</script>
+				&nbsp;欢迎您来到政金所一类国债投资交易平台！</div>
+			<div class="right">
+				
+				<a href="#" class="a-main" style="margin-left:20px;" target="_blank">会员俱乐部</a> 
+				<a href="#" class="a-main">帮助中心</a> 
+				<a href="#" class="a-main" target="_blank">企业邮箱</a>
+				<a href="#" class="a-main1 a1" style="position:relative;">手机APP<img style="position:absolute;bottom:-170px;right:-40px;" src="images/app.jpg" /></a> 
+				<a href="#" class="a-main1 a2" style="position:relative;">微信<img style="position:absolute;bottom:-170px;right:-40px;" src="images/weixin.jpg"/></a> 
+				<a target="_blank" href="#" class="a-main1 a3">微博</a>
+			</div>
+
+		</div>
+	</div>
+	
+	<script>
+		$(".head .right .a-main1 img").css("display", "none");
+		$(".head .right .a-main1").hover(function() {
+			$(this).find("img").css("display", "block")
+		}, function() {
+			$(this).find("img").css("display", "none");
+		});
+	</script>
+
+	<div class="logo-con">
+		<a href="index.htm">
+		<img src="images/trrgb-logo.png"  class="logo" border="0" /></a>
+
+		<div class="right">
+			<img src="images/trrgb-city.png"  class="right-img" />
+
+			<div class="my-zh">
+				<a href="center.htm" >我的账户<span><img src="images/btn_01.png"></span></a>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="navigation-con">
+		<!--导航栏开始-->
+		<div id="main_nav">
+			<div id="nav_center">
+				<span class="center_txt">
+					<a href="#">首页</a>
+				</span>
+				<span class="center_txt">
+					<a class="txt_dis" href="#">征信宝</a>
+				</span>
+				<span class="center_txt">
+					<a class="txt_dis" href="#">信托资管</a>
+				</span>
+				<span class="center_txt">
+					<a class="txt_dis" href="#">政信债权</a>
+				</span>
+				<span class="center_txt">
+					<a class="txt_dis" href="#">征信研究院</a>
+				</span>
+				<span class="center_txt">
+					<a class="txt_dis" href="#">理财师查询</a>
+				</span>
+				<span class="center_txt">
+					<a class="txt_dis" href="#">关于我们</a>
+				</span>
+				
+			</div>
+		</div>
+	</div>
+	
+		
+
+		<div id="banner">
+
+	
+	
+	<script>
+         //<![CDATA[
+    window.onload = function () { 
+        var oBox = document.getElementById('box');
+        var oPrev = getByClass(oBox, 'prev')[0];
+        var oNext = getByClass(oBox, 'next')[0];
+        var oBigUl = getByClass(oBox, 'bigUl')[0];
+        var aLiBig = oBigUl.getElementsByTagName('li');
+        var oNumUl = getByClass(oBox, 'numberUl')[0];
+        var aLiNumber = oNumUl.getElementsByTagName('li');
+        var oTextUl = getByClass(oBox, 'textUl')[0];
+        var aLiText = oTextUl.getElementsByTagName('li');
+        var nowZindex = 1;
+        var now = 0;
+
+        function tab() {
+            for (var i = 0; i < aLiNumber.length; i++) {
+                aLiNumber[i].className = '';
+            }
+            aLiNumber[now].className = 'night';
+
+            aLiBig[now].style.zIndex = nowZindex++;
+            aLiBig[now].style.opacity = 0;
+            startMove(aLiBig[now], 'opacity', 100);
+            for (var i = 0; i < aLiText.length; i++) {
+                aLiText[i].style.display = 'none';
+            }
+            if(typeof(aLiText[now]) == "undefined" || aLiText[now]==null || aLiText[now]== ''){
+            }else{
+            	aLiText[now].style.display = 'block'
+            }
+        }
+
+        for (var i = 0; i < aLiNumber.length; i++) {
+            aLiNumber[i].index = i;
+            aLiNumber[i].onclick = function () {
+
+                if (this.index == now)return;
+                now = this.index;
+
+                tab();
+            }
+        }
+        oNext.onmouseover = oPrev.onmouseover = oBigUl.onmouseover = function () {
+            startMove(oPrev, 'opacity', 100);
+            startMove(oNext, 'opacity', 100)
+        }
+        oNext.onmouseout = oPrev.onmouseout = oBigUl.onmouseout = function () {
+            startMove(oPrev, 'opacity', 0);
+            startMove(oNext, 'opacity', 0)
+        }
+        oPrev.onclick = function () {
+            now--
+            if (now == -1) {
+                now = aLiNumber.length - 1;
+            }
+            tab();
+        }
+
+        oNext.onclick = function () {
+            now++
+            if (now == aLiNumber.length) {
+                now = 0;
+            }
+            tab();
+        }
+
+        var timer = setInterval(oNext.onclick, 3000)
+        oBox.onmouseover = function () {
+            clearInterval(timer)
+        }
+        oBox.onmouseout = function () {
+            timer = setInterval(oNext.onclick, 3000)//改变速度修改3000 ，例如3000=3秒钟
+        }
+    }
+    //]]> 
+</script>
+       <script>
+       //<![CDATA[
+              $(function(){
+              if($(".bigUl li").length >1){
+		$(".bigUl").after( $('<div></div><ul class="numberUl"></ul>')); 
+    	for(i=1;i<=$(".bigUl li").length;i++){
+		if(i==1) $(".numberUl").append($("<li class=\"night\"> "+i+"</li>")); 
+		else $(".numberUl").append($("<li> "+i+" </li>"))}};
+              });
+              //]]> 
+       </script>
+	
+	<div class="banner-con">
+			<div class="banner">
+				<div id="box">
+				<div class="prev"></div>
+                <div class="next"></div>
+					<ul class="bigUl">
+						<a><li style="display: list-item;"><img src="images/65581484191614632.jpg"/></li> </a>
+						<a><li style="display: list-item;"><img src="images/87361492046925924.jpg"/></li> </a>
+						<a><li style="display: list-item;"><img src="images/17971461821831933.jpg"/></li> </a>
+						<a><li style="display: list-item;"><img src="images/82641461131593760.jpg"/></li> </a>
+						<a><li style="display: list-item;"><img src="images/39121484703717848.jpg"/></li> </a>
+					
+					</ul>
+					
+					<div>
+						<ul class="textUl" style="display:none">
+							<li style="display:block;"><a href="#">no</a>
+							</li>
+							<li><a href="#">no</a>
+							</li>
+							<li><a href="#">no</a>
+							</li>
+							<li><a href="#">no</a>
+							</li>
+
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			
+			<div class="login">
+				<img src="images/ggy.jpg" class="ggy" />
+				<!-- <div class="lo-top">
+						<a href="register.htm" class="a1">免费注册</a>
+						<a href="memberLoginPage.htm"  class="a2">立即登录</a>
+				</div> -->
+				<div class="head_ins" id="head_bottom">
+					<div id="bottom_ins">
+						<div id="bottom_top">
+							<p>欢迎您回来政金所，<a href="#">138****1380</a></p>
+						</div>
+						<div id="bottom_center">
+							<form action="" method="">
+								<input type="button" value="进入我的账户"/>
+							</form>
+						</div>
+						<div id="bottom_bottom">
+							<div class="bottom_txt" id="bottom_left">
+								<span>查看项目列表</span>
+							</div>
+							<div class="bottom_txt" id="bottom_right">
+								<span>安全退出</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+					function AutoScroll(obj) {
+						$(obj).find("ul:first").animate({
+							marginTop : "-30px"
+						}, 500, function() {
+							$(this).css({
+								marginTop : "0px"
+							}).find("li:first").appendTo(this);
+						});
+					}
+					$(document).ready(function() {
+						setInterval('AutoScroll("#scrollDiv")', 2000)
+					});
+					
+				</script>
+				<div></div>
+					
+				<div>
+					<img src="images/puls.jpg" />
+					<div id="scrollDiv">
+						
+						<ul>
+								<li><a href="070503-tId=xinwen.htm" style="overflow:hidden;">浦发银行系统维护通知</a></li>
+								<li><a href="070501-tId=xinwen.htm" style="overflow:hidden;">银行系统升级维护公告</a></li>
+								<li><a href="062701-tId=xinwen.htm" style="overflow:hidden;">光大银行系统维护公告</a></li>
+								<li><a href="062103-tId=xinwen.htm" style="overflow:hidden;">浦发银行系统升级维护公告</a></li>
+								<li><a href="061405-tId=xinwen.htm" style="overflow:hidden;">浦发银行升级维护公告</a></li>
+								<li><a href="050601-tId=xinwen.htm" style="overflow:hidden;">银行系统维护公告</a></li>
+								<li><a href="042701-tId=xinwen.htm" style="overflow:hidden;">网站迁移重要公告</a></li>
+								<li><a href="042501-tId=xinwen.htm" style="overflow:hidden;">工商银行系统升级维护公告</a></li>
+						</ul>
+
+					</div>
+					
+					<div class="right_bottom">
+						<div class="bottom_text">
+							<div class="text_one">
+								<img src="images/guide_01.png" alt="">
+							</div>
+							<div class="text_two">
+								<p>了解政金所，从这里开始</p>
+							</div>
+							<div class="text_tree">
+								<form action="">
+									<input type="button"  value="进入">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="left_bottom" style="width:height:107px;width:843px;border:1px solid #dfdfdf;">
+				<span>
+					<img src="images/age_01.png" alt="">
+				</span>
+				<span>
+					<img class="bottom_img" src="images/age_02.png" alt="">
+				</span>
+				<span>
+					<img class="bottom_img" src="images/age_03.png" alt="">
+				</span>
+				<span>
+					<img class="bottom_img" src="images/age_04.png" alt="">
+				</span>
+				<span>
+					<img class="bottom_img" src="images/age_05.png" alt="">
+				</span>
+			</div>
+			
+		</div>
+		</div>
+
+		<!--公司动态开始-->
+		<div id="main_at">
+			<div id="at_insde">
+				<div id="ins_left">
+					<div class="at_ins insde_top" >
+						<div class="top_title">
+							<p>公司动态</p>
+						</div>
+						<div class="top_content">
+							<div class="content_left">
+								<div class="left_top">
+									<p>公司新闻</p>
+								</div>
+								<div class="left_bottoms">
+									<div class="bottoms_img">
+										<img src="images/mic_01.png" alt="">
+									</div>
+									<div class="bottoms_txt">
+										<p>破解“入园难” 政府须行动</p>
+										<span>
+											政金所，是国内独家类国债政信资产交易平台。以“聚焦政信，服务大众”为经营理念，专注于政信类金融产品，确保投资人的投资在中国特定的政治经济环境下风险趋零化。政金所是面向整个政信金融市场 . . . <a href="#">>>详情</a>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="content_center">
+								<img src="images/border_1.png" alt="">
+							</div>
+							<div class="content_right">
+								<div class="right_top">
+									<p>公司新闻</p>
+								</div>
+								<div class="right_bottoms">
+									<div class="bottoms_img">
+										<img src="images/mic_02.png" alt="">
+									</div>
+									<div class="bottoms_txt">
+										<p>支付宝提现收费了 马云粉：蓝瘦，香菇</p>
+										<span>
+											政金所是由国投政信（厦门）互联网金融信息服务有限公司的面向整个政信金融市场、全国各级地方政府项目，筛选债权、应收账款收益权、投资收益权及项目投资计划等优质、稳健的政信产品 . . . <a href="#">>>详情</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ins_right">
+					<div class="right_ins insde_top">
+						<span class="top_left">收益对比</span>
+						<span class="top_right">2015-12-11</span>
+					</div>
+					<div class="right_ins insde_center">
+						<img src="images/fit_01.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--公司动态结束-->
+		
+		<div class="wrap">
+			<div class="product-list">
+				<div class="left">
+					<p class="title0 t_gsdt">公司资讯</p>
+					<div class="dt_main zx_main">
+						<ul class="zx_left">	
+						
+						<li><img src="images/23411488529958289.jpg" width="605" height="200" /></li>	
+						
+						<li><img src="images/95211488529919386.jpg" width="605" height="200" /></li>	
+						
+						<li><img src="images/24921488529894421.jpg" width="605" height="200" /></li>	
+						
+						<li><img src="images/54061488529820365.jpg" width="605" height="200" /></li>
+						</ul>
+						<ol class="zx_right">	
+							<li><span style="padding: 0 6px 0 50px; display: block;  overflow: hidden; height: 59px; text-overflow: ellipsis;white-space:nowrap;">搭建合作平台、实现政府与社会资本共赢</span></li>	
+							<li><span style="padding: 0 6px 0 50px; display: block;  overflow: hidden; height: 59px; text-overflow: ellipsis;white-space:nowrap;">精英云集、把脉中国经济</span></li>	
+							<li><span style="padding: 0 6px 0 50px; display: block;  overflow: hidden; height: 59px; text-overflow: ellipsis;white-space:nowrap;">深度对话交流</span></li>	
+							<li><span style="padding: 0 6px 0 50px; display: block;  overflow: hidden; height: 59px; text-overflow: ellipsis;white-space:nowrap;">征信为本、创富于民</span></li>
+						</ol>		
+					</div>
+				</div>
+
+				<div class="right">
+					<p class="title">
+						媒体报道<a href="mtbd.htm" style="color: #585858; " class="goleft">更多&gt;</a>
+					</p>
+
+					<div class="main-info">
+							<a href="092102-tId=mtbd.htm" title="【转自国投信达】抑郁并非“想不开”那么简单"><span class="sp1 red">·</span><span class="more-hid">【转自国投信达】抑郁并非“想不开”那么...</span> <span class="sp3">2016-09-21 </span> </a>
+							<a href="082502-tId=mtbd.htm" title="【转自华宇国信】华宇国信“结盟”贵阳银行  共促贵州经济发展"><span class="sp1 red">·</span><span class="more-hid">【转自华宇国信】华宇国信“结盟”贵阳银...</span> <span class="sp3">2016-08-25 </span> </a>
+							<a href="050501-tId=mtbd.htm" title="国投信达“政府PPP项目创新合作对接专场座谈会”在京举办"><span class="sp1 red">·</span><span class="more-hid">国投信达“政府PPP项目创新合作对接专...</span> <span class="sp3">2016-05-05 </span> </a>
+							<a href="042703-tId=mtbd.htm" title="国投信达联合华宇国信 助力云南水利建设"><span class="sp1 red">·</span><span class="more-hid">国投信达联合华宇国信 助力云南水利建设</span> <span class="sp3">2016-04-27 </span> </a>
+							<a href="042702-tId=mtbd.htm" title="国投信达“第九届政信金融及PPP项目高峰论坛”在京举办"><span class="sp1 red">·</span><span class="more-hid">国投信达“第九届政信金融及PPP项目高...</span> <span class="sp3">2016-04-27 </span> </a>
+							<a href="042603-tId=mtbd.htm" title="国投信达与贵州多地展开合作，共促地方经济发展"><span class="sp1 red">·</span><span class="more-hid">国投信达与贵州多地展开合作，共促地方经...</span> <span class="sp3">2016-04-26 </span> </a>
+					</div>
+				</div>
+			</div>	
+		</div>
+			<div class="school-list">
+				<div class="left">
+					<p class="title0">
+						政信研究院 <span class="sp1">新闻资讯<img src="images/must-arrow.jpg" /> </span> 
+						<span class="sp2">政信专栏<img src="images/must-arrow.jpg"/></span>
+						<span class="sp3">安全性研究<img src="images/must-arrow.jpg"/></span> 
+						<span class="sp4">PPP研究<img src="images/must-arrow.jpg" /></span>
+						<span class="sp5">存量债务<img src="images/must-arrow.jpg"/></span> 
+						<span class="sp6">政府法规<img src="images/must-arrow.jpg" /></span>
+					</p>
+					
+					<div class="bto cli">
+							<a href="102003-tId=meitibaodao.htm"   class="gives" style="font-weight: bold">
+							<span class="sp">·</span>【转自国投信达】厉害了！万亿PPP开启...<span class="time">2016-10-20 </span>
+								<p style="font-weight:normal">
+									      
+									近日，促投资打出政策组合拳，PPP政策从“框架”走向“落实”，基建投资批复也进一步提速。在当前稳健的货币政策和积极的财政政策下，PPP将成为撬动财政的支点，随着四季度万亿PPP项目加速落地，对基建投资的拉动作用将越来越明显，全年经济增长有望实现预期目标。备受瞩目的第三批PPP项目揭开神秘面纱财政部联合20个部委发布《关于联合公布第三批政府和社会资本合作示范项目加快推动示范项目建设的通知》，确定516个项目作为第三批PPP示范项目，计划总投资金额11708亿元。相较于前两批，第三批PPP示范项目在项目数量、投资总规模、所涉及的省市范围和所覆盖的行业领域方面都有空前的突破，项目数量扩增2.5倍，投...
+								</p> </a>
+							<a href="101801-tId=meitibaodao.htm"  title="【转自国投信达】破解“入园难” 政府须行动" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】破解“入园难” 政府须...<span class="time">2016-10-18 </span>
+								<p style="font-weight:normal">
+									      
+									面对幼儿园“入园难”的问题，北京、深圳、南京等大城市的学生家长备受煎熬。有的家长为孩子上幼儿园而通宵排队，有的家长花钱托关系，还有的家长忍痛送孩子回老家，不一而足。国投信达投资基金（北京）有限公司相关负责人表示：“入园难问题是相关社会因素长期积累造成的，需要政府部门从根本上想办法解决问题。就目前的情况来说，积极增加财政投入的同时引入社会资本发展学前教育事业，用两条腿走路，不失为一种好方法。”缘何“入园难”导致“入园难”，首要的问题在于人口增速远在规划之外。以深圳市为例，去年出台的《深圳市学前教育发展行动计划(2015~2017年)》中，深圳市教育局规划力争每年新增约70所幼儿园、2万个幼儿园学...
+								</p> </a>
+							<a href="101702-tId=meitibaodao.htm" title="【转自国投信达】高明CEO常打“温情牌”" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】高明CEO常打“温情牌...<span class="time">2016-10-17 </span>
+								<p style="font-weight:normal">
+									      
+									琳琅满目的精美食物+窗明几净的就餐环境=一顿舒畅的吃饭体验=心情愉悦地工作=公司效益的大幅度提升……这个等式的成立并非是异想天开，因为越来越多的公司发现，吃会影响员工的工作效率和积极性。员工可能不会因为食堂选择一家企业，但对企业而言，食堂也不再只是员工吃饭的地方那么简单。在前程无忧发布的“2014中国最佳人力资源典范”十大单项奖中，“公司食堂”已经作为一种公司福利，成为影响雇主品牌的要素之一。美食作为工作福利，已经成为很多公司的另一种特殊logo。Google总部拥有20多个食堂，涵盖了日料、中餐、印度菜、意大利菜等各种风味，厨师则都是从各个星级餐馆高薪聘请来的。Facebook的餐饮，除了一...
+								</p> </a>
+							<a href="141003-tId=meitibaodao.htm" title="【转自国投信达】支付宝提现收费了  马云粉：蓝瘦，香菇" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】支付宝提现收费了  马...<span class="time">2016-10-14 </span>
+								<p style="font-weight:normal">
+									      
+									今年3月份微信提现收费，当时许多人说：转账我只认支付宝。然而，转眼间尴尬的事情发生了。从10月12日起，支付宝已正式实行提现收费。同时，从支付宝余额新转入余额宝的资金，转出时只能转到余额，不能直接转到银行卡。小编发现，经过了此前微信收费一役，如今的舆论对待此事已相对冷静。网络上出现许多诸如“如何规避服务费”或“记住这8个妙招应对提现收费”之类的攻略，开始受追捧。或是有专家开始分析，互联网领域“免费午餐”越来越少，马云爸爸此举是不是搬起石头砸自己的脚，把自己的用户推给银行。按照规定，跟小编一样的普通个人用户，在超出2万元免费额度后，每笔会收取0.1%的服务费，个人卖家、企业卖家不会受到影响。这下...
+								</p> </a>
+							<a href="101304-tId=meitibaodao.htm" title="【转自国投信达】打造“宜居乡村” 提升农民幸福指数" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】打造“宜居乡村” 提升...<span class="time">2016-10-13 </span>
+								<p style="font-weight:normal">
+									      
+									我国正处于城镇化高速发展期。进行城镇化发展，并不意味要放弃农村。促进城镇化健康发展，就要使城镇化和新农村建设协调发展。打造“宜居乡村”，是实现新农村建设的题中之义。打造“宜居乡村”在我国不少省市已经蔚然成风，辽宁、湖北等省省委省政府正聚力于此，取得了良好的社会效果，获得了当地人民的好评。湖北省政府办公厅于2016年9月中下旬发布《关于统筹整合相关项目资金开展美丽宜居乡村建设试点工作的指导意见》提出，从今年起，每年重点支持300-500个村开展美丽宜居乡村建设试点，到2020年底，建成2000个左右美丽宜居示范村。对于建设美丽宜居示范村，《指导意见》提出了五项建设重点，即加强基础设施建设、改善农...
+								</p> </a>
+					</div>
+					
+					<div class="bto cli">
+							<a href="102004-tId=wangzhangonggao.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】稳增长加码 PPP成促投资发力点<span class="time">2016-10-20 </span>
+
+								<p style="font-weight:normal">
+									      
+									近日，促投资打出政策组合拳，PPP政策从“框架”走向“落实”，基建投资批复也进一步提速。业内人士认为，当前经济下行压力加大，稳增长政策显著加码，基建投资仍是主要发力点。在当前稳健的货币政策和积极的财政政策下，PPP将成为撬动财政的支点，随着四季度万亿PPP项目加速落地，对基建投资的拉动作用将越来越明显，全年经济增长有望实现预期目标。促投资打出政策组合拳13日，第三批516个PPP示范项目落地，计划总投资金额1.17万亿元，比第二批示范项目增加77%。有分析认为，由于本次PPP项目总体规模远超前两批，意味着整个投资有望回升，特别是民间投资。有消息称，未来一段时间我国将针对扩大投资，尤其是民间投资...
+								</p> </a>
+							<a href="101904-tId=wangzhangonggao.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】铁路基建股集体爆发 地产调控和PPP成催化剂<span class="time">2016-10-19 </span>
+
+								<p style="font-weight:normal">
+									      
+									昨日铁路基建股发动了久违的攻势，集体飘红，助力A股一扫前一交易日的颓势，对大盘起到了定海神针的作用。有分析认为，在地产调控背景下，PPP基建蓝筹的价值更加凸显，而这些股票估值整体处于低位，多数个股刚从低位或底部放量上涨，估值重心有望继续上移。铁路基建股集体上攻今年以来相对沉寂的铁路基建股昨日午后集体发动攻势。受A股市场铁路基建股大涨的影响，港股市场上的相关概念股也应声上扬。部分板块今年以来不断实现轮涨相比，铁路基建股表现相对平淡，并未出现较大的阶段涨幅。从今年整体涨幅来看，大多数铁路基建股录得负涨幅。对于昨日午后铁路基建股的强势拉升，一位券商分析师认为，目前铁路基建股估值整体处于低位，多数个股...
+								</p> </a>
+							<a href="101802-tId=wangzhangonggao.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】年末数千亿元投资项目入场 稳增长基建PPP发力<span class="time">2016-10-18 </span>
+
+								<p style="font-weight:normal">
+									      
+									进入四季度，一批批投资项目相继获批，稳增长意图明显。“十一长假”过后至今，发改委批复了超过2000亿元投资项目；财政部公布了第三批政府和社会资本合作（简称PPP）示范项目，投资总额达到1.17万亿元；地方政府也集中开工一批基建项目。“加上先期批准的，初步估算，四季度至少有数千亿元的项目开工落地。”证券行业研究员说。按照惯例，临近年底投资项目批复往往会相对放缓。但是，从发改委10月份的项目批复情况来看，丝毫没有“歇息”。本月，发改委批复的项目投资规模共计达2000亿元。其中，13日，发改委分别批复乌鲁木齐市、厦门市城市轨道交通第二期建设规划两个城市轨交项目，投资额超1300亿。11日，发改委发布...
+								</p> </a>
+							<a href="101703-tId=wangzhangonggao.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】借助PPP，民间资本有望实现投资突围<span class="time">2016-10-17 </span>
+
+								<p style="font-weight:normal">
+									      
+									12日，财政部发布《关于在公共服务领域深入推进政府和社会资本合作工作的通知》。通知指出，在垃圾处理、污水处理等公共服务领域，新建项目要“强制”采用PPP模式。在其他中央财政给予支持的公共服务领域，对于有现金流、具备运营条件的项目，要“强制”实施PPP模式识别论证。早在8月30日，国家发改委发布《关于切实做好传统基础设施领域政府和社会资本合作有关工作的通知》，明确在能源、交通设施、水利、环保、农业、林业、重大市政工程等七大领域鼓励和引导民资进入。这意味着，基础设施领域建设中将不再是国企“一家独大”，未来，将有更多政府投资项目向民间资本开放。从最近各地的新闻快报来看，近几个月来，全国各地PPP项目...
+								</p> </a>
+							<a href="101404-tId=wangzhangonggao.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】财政发力PPP  多部门共推顶层设计<span class="time">2016-10-14 </span>
+
+								<p style="font-weight:normal">
+									      
+									今年一、二季度GDP增速均为6.7%，验证了2015年曾提出的经济为L型判断。但L型并不意味着经济不波动或者没有下行的压力，只是从快速下滑期步入缓慢探底期。随着房地产投资回落，未来经济仍存下行压力，政府存在再次稳增长诉求。未来新一轮的稳增长可能不同于过去。2014—2015年稳增长主要通过宽货币政策，但是副作用也非常明显，即股市、房地产价格上涨。有业内人士指出，近期将很难看到央行发出再宽松的强烈信号：1，美联储加息预期升温，过于强烈的宽松信号会带来人民币贬值和资金流出的压力。2，尽管年内CPI的高点已过，但是油价菜价上涨，央行对通胀仍有一定的警惕。3，近期房市火爆，地王频出，二季度政治局会议提...
+								</p> </a>
+					</div>
+					
+					<div class="bto cli">
+							<a href="963852-tId=anquanxingyanjiu.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>安全性研究——《投资者如何挑选政信项目》<span class="time">2015-02-16 </span>
+
+								<p style="font-weight:normal">
+									      
+									虽然受到政策和监管的影响，使得政信项目的发行规模受到有所下降，但是相比于高风险的房地产项目，大多数投资者认为有地方政府“买单”的政信项目不能兑付的风险极低，所以此类项目在市场受到热捧，投资者的购买热情不减。投资者这种盲目迷信“政府信用”，的做法存在了很大的风险，虽然此类项目和政府信用紧密相关，但在法理上并不支持地方政府为项目担保。因此，不能从法律责任上认定政信项目有政府信用担保，否则有悖于担保法，其实质还是企业信用，但可以看成这类产品上加载了政府对未来行政行为的确认。由于地方财政收入的有限，政信项目的最大风险是到期无力支付，需要延期偿付。由于个人投资者通过自身能力很难了解更详细的地方政府情况，...
+								</p> </a>
+							<a href="789654-tId=anquanxingyanjiu.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>安全性研究——《选择优质政信产品标准》<span class="time">2015-02-16 </span>
+
+								<p style="font-weight:normal">
+									      
+									矿产、煤炭类信托危机尚没过去，房地产信托也开始风声鹤唳。在琳琅满目的高收益信托理财产品中，还有那一片可以安心的“净土“吗？聪明的大额投资者把目光齐刷刷投向了——政信合作类产品，但仍然心存疑问：“这个会不会是激流中的安全岛”？政信合作类项目是指政府通过其下属的地方融资平台公司以某个特定的基础设施建设项目为由向信托公司融得资金的事务，地方融资平台的主要收入直接或间接来源于政府财政，无论地方融资平台是否实行市场化运作，其经营运转情况是否良好，都离不开其背靠政府的资源禀赋。因此人们常说的政信合作类产品包含了隐性政府信用，实际上是因为这些项目的终极还款人指向政府。有句谚语很形象地描述了债权债务关系——“...
+								</p> </a>
+							<a href="56754645-tId=anquanxingyanjiu.htm"  class="gives" style="font-weight: bold"><span class="sp">·</span>安全性研究——《如何选择优质政信理财产品》<span class="time">2015-02-15 </span>
+
+								<p style="font-weight:normal">
+									      
+									截止到目前，政信合作类信托产品以其极为良好的兑付记录以及微乎其微的风险案例，受到投资者的普遍青睐。政信类项目风险概率较低的原因一是政府的违约成本高；二是信托公司在前期风控筛选项目的时候对政信项目的资质和风控措施、还款来源等都有严格的要求，风险就进一步降低了。但即使如此，因每个地区的经济情况差异较大，政府的信用度不同，融资平台的资质不同，具体的每个产品的性价比在不同时点还是有差异，还是可以通过一些维度的分析来最大限度的降低风险，从而选到性价比高的政信类信托。对于投资人来说，选择政信类产品重点是看融资方的实力。初步选择政信类信托应该从区域、政府财政情况、融资主体实力、产品增信措施等几方面考察。优选...
+								</p> </a>
+					</div>
+					
+					<div class="bto cli">
+							<a href="092903-tId=pppyanjiu.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】PPP模式的金融基因助力非物质文化遗产传承<span class="time">2016-09-29 </span>
+
+								<p style="font-weight:normal">
+									      
+									伴随着改革开放30多年的发展和人们财富的积累，人们在满足基本的物质需要后，对精神和文化产品越来越重视。但与此同时，经济的快速发展也加速了文化遗产的消亡。
+如何利用金融手段保护和传承非物质文化遗产成为人们关心的问题。非物质文化遗产与PPP的契合点文化遗产的保护和传承是政府义不容辞的责任和义务。作为社会发展和历史文脉传承的重要部分，非物质文化遗产的延续也是政府公共事业的重要组成部分。除了立法以外，最近两年盛行的PPP中的基因在一定程度上可以对接非物质文化遗产的保护。非物质文化遗产具有无形性、活态性、传承性、民族性和地域性等特征，可以采取区域性或景区式的保护和利用措施，挖掘其文化价值，让非物质文化...
+								</p> </a>
+							<a href="090803-tId=pppyanjiu.htm"  class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】加快推进农业PPP投资<span class="time">2016-09-08 </span>
+
+								<p style="font-weight:normal">
+									      
+									我国正处于“工业反哺农业、城市支持农村发展”的关键时期。尽管国家的综合经济实力和产业结构特征已具备了“工业反哺农业”和“以城带乡”的能力，但是社会主义初级阶段的基本国情决定了大规模依靠政府投资来反哺农业和支持农村是不现实的。积极运用PPP模式引导社会资本投入到农业和农村，是现阶段“反哺农业、支持农村发展”的重要手段之一。
+一、我国农业PPP投资现状近年来，随着国家现代农业体系建设的深化和中央对农业扶持力度的加大，农业成为投资的热点领域，农业的PPP投资已经初现端倪。1．出台政策支持农业PPP。为深入贯彻落实中央1号文件、《国务院办公厅关于加快转变农业发展方式的意见》等文件精神，进一步优化政策...
+								</p> </a>
+							<a href="16090601-tId=pppyanjiu.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】推进PPP模式，律师不能缺席<span class="time">2016-09-06 </span>
+
+								<p style="font-weight:normal">
+									      
+									近年来，在中央政府、有关部委的推动下，一股PPP热正在形成，城乡建设中PPP项目需求不断增加、规模不断扩大。同时，中介业务空前增长，第三方咨询机构参与PPP全流程服务已经成为地方政府进行PPP项目的标准配置；但是，法律人的参与明显不足，这显然与PPP项目本身应该有的法律需求不相符。同时，也反映中国律师自身适应市场需求的努力不够。笔者认为：推进PPP模式，律师不能缺席。一、PPP模式概述 PPP模式是指政府与私人组织之间，为了提供某种公共物品和服务，以特许权协议为基础，彼此之间形成一种伙伴式的合作关系，并通过签署合同来明确双方的权利和义务，以确保合作的顺利完成，最终使合作各方达到比预期单独行动更...
+								</p> </a>
+							<a href="090602-tId=pppyanjiu.htm"  class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】“物质养老”之后  老年人需要“文化养老”<span class="time">2016-09-06 </span>
+
+								<p style="font-weight:normal">
+									      
+									我国已经面临着人口老龄化问题。据预测，到2050年，我国65岁及以上的老年人口数量将达到4亿，占总人口将超过30%。有人口专家预测，2020年后，随着上世纪六、七十年代人口高峰期出生人口相继进入老年，社会养老压力将浮出水面，养老危机将爆发。面对老龄化时代提前来临，整个社会从物质到心理等方面都没做好准备。除了诸如医疗、住房等养老硬件设施需要国家和社会关注外，养老软件设施同样离不开国家和社会的大力发展和资金投入。国投信达相关负责人认为：“应对老龄化浪潮，国家和社会需要在保证‘物质养老’之后，关注老年人的精神生活，实现‘文化养老’。”老年人需要丰富的精神文化生活目前，我国老年人的精神文化生活保障情况...
+								</p> </a>
+							<a href="090503-tId=pppyanjiu.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>【转自国投信达】莆田推广PPP模式 已有17个项目进入项目库<span class="time">2016-09-05 </span>
+
+								<p style="font-weight:normal">
+									      
+									近日，莆田市财政局下发《关于推广政府和社会资本合作（PPP）模式的指导意见》，规范了PPP项目的准备、采购、执行、移交等各环节操作流程。据了解，目前，莆田市共有17个项目列入PPP项目库，总投资151.95亿元，涉及交通运输、市政工程、旅游休闲等多个领域。业内人士表示，推广PPP模式既鼓励社会资本参与提供公共产品和公共服务获取合理回报，又能减轻政府公共财政举债压力、腾出更多资金用于重点民生项目建设。PPP模式可减轻政府财政负担所谓PPP模式，即政府和社会资本合作（公私合营）模式，是指政府为增强公共产品和服务供给能力、提高供给效率，通过特许经营、购买服务、股权合作等方式，与社会资本建立的利益共享...
+								</p> </a>
+
+					</div>
+					
+					<div class="bto cli">
+							<a href="35345-tId=cunliangzhaiwu.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>存量债务——《地方政府存量债务纳入预算管理清理甄别办法》<span class="time">2015-02-15 </span>
+
+								<p style="font-weight:normal">
+									      
+									关于印发《地方政府存量债务纳入预算管理清理甄别办法》的通知财预〔2014〕351号各省、自治区、直辖市、计划单列市财政厅（局）：　　为进一步加强地方政府性债务管理, 做好地方政府存量债务纳入预算管理相关工作，根据《国务院关于加强地方政府性债务管理的意见》（国发〔2014〕43号），财政部制定了《地方政府存量债务纳入预算管理清理甄别办法》，现印发给你们，请认真贯彻执行。　　附件：地方政府存量债务纳入预算管理清理甄别办法　　财政部2014年10月23日　　 附件地方政府存量债务纳入预算管理清理甄别办法　　第一条 为贯彻落实《国务院关于加强地方政府性债务管理的意见》（国发〔2014〕43号，以下简称...
+								</p> </a>
+							<a href="423534323-tId=cunliangzhaiwu.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>存量债务——《国务院要求地方政府将存量债务纳入预算管理》<span class="time">2015-02-15 </span>
+
+								<p style="font-weight:normal">
+									      
+									国务院要求地方政府将存量债务纳入预算管理 中新网10月2日电 据中国政府网消息，国务院办公厅日前印发《关于加强地方政府性债务管理的意见》。《意见》要求，地方政府要抓紧将存量债务纳入预算管理，积极降低存量债务利息负担，妥善偿还存量债务。　　《意见》规定，以2013年政府性债务审计结果为基础，结合审计后债务增减变化情况，经债权人与债务人共同协商确认，对地方政府性债务存量进行甄别。对地方政府及其部门举借的债务，相应纳入一般债务和专项债务。对企事业单位举借的债务，凡属于政府应当偿还的债务，相应纳入一般债务和专项债务。地方政府将甄别后的政府存量债务逐级汇总上报国务院批准后，分类纳入预算管理。纳入预算管理...
+								</p> </a>
+							<a href="123456-tId=cunliangzhaiwu.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>存量债务——《存量地方债需以更有力方法获取真实数据》<span class="time">2015-02-16 </span>
+
+								<p style="font-weight:normal">
+									      
+									存量地方债需以更有力方法获取真实数据2015-02-14 02:58:00　来源: 南方都市报(深圳) 地方政府存量债务清理甄别工作，按计划应于今年1月5日上报结果，如今已过去一月有余，并未公布结果。财政部近日发文称有一些地方存在债务数据错报、虚报等问题，要求各地对初步清理甄别结果组织开展自查，2015年3月8日前将结果上报财政部。
+ 由于存量地方债务中有大量的地方融资平台债，且没有一个统一的标准，平台债模糊不清的边界为存量地方债数据提供了很大的调整空间。例如，对于平台债政府是负有偿还责任还是担保和救助责任，计入地方债的数额就大有不同；又如，计入存量地方债的平台债务，是按照资金实际使用用途计...
+								</p> </a>
+							<a href="456123-tId=cunliangzhaiwu.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>存量债务——《地方债装进预算“笼子” 存量债务总额待定》<span class="time">2015-02-16 </span>
+
+								<p style="font-weight:normal">
+									      
+									地方债装进预算“笼子” 存量债务总额待定第一财经日报 陈益刊 2015-01-12 核心提示：不过，地方债被纳入预算管理之前，国务院会对其进行限额。国务院将会确定地方债清理甄别之后的债务总额，而财政部会依此再确认各地区的债务总额。 继走完存量地方政府性债务(下称“地方债”)清理甄别这步棋后，财政部制定的《地方政府债务纳入预算管理暂行办法》(下称《办法》)已经进入征求意见阶段，这意味着地方债管理开始迈出第二步：将地方债分门别类纳入预算管理。 不过，地方债被纳入预算管理之前，国务院会对其进行限额。国务院将会确定地方债清理甄别之后的债务总额，而财政部会依此再确认各地区的债务总额。
+地方债甄别 《第...
+								</p> </a>
+							<a href="159753-tId=cunliangzhaiwu.htm"  class="gives" style="font-weight: bold"><span class="sp">·</span>存量债务——《地方政府超报存量债务 财政部要求打回重做》<span class="time">2015-02-16 </span>
+
+								<p style="font-weight:normal">
+									      
+									地方政府超报存量债务 财政部要求打回重做2015年02月15日 01:47 经济观察报　　地方政府翘首期待的存量债务结果没有公布，等来的却是财政部一纸重新上报的通知。　　上月底，政部预算司发出《关于开展地方政府存量债务初步清理甄别结果自查工作的通知》(下称“通知”)，认为在上报存量债务时有一些地方存在债务数据错报、虚报等问题，需要进一步核实。　　通知要求，各地严格按照2013年政府性债务审计口径和财预(2014)351号文件要求，对初步清理甄别结果组织开展自查。351号文，即《地方政府存量债务纳入预算管理清理甄别办法》。　　同时，通知还指出，各地重点要核查是否存在，将不应由政府偿还的企事业单位...
+								</p> </a>
+					</div>
+					
+					<div class="bto cli">
+							<a href="061202-tId=zhengcefagui.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>发改委解读：《关于进一步鼓励和扩大社会资本投资建设铁路的实施意见》<span class="time">2016-06-12 </span>
+
+								<p style="font-weight:normal">
+									      
+									一、关于《实施意见》出台的背景和意义。铁路是国民经济大动脉和关键基础设施，加快推进铁路建设，既利当前，又利长远，对稳增长、调结构、惠民生具有重要意义。党中央、国务院领导同志十分关心铁路建设，多次作出重要批示，要求加快铁路发展。同时，铁路抄送列表总公司也面临较大的债务负担，还本付息压力逐渐加大，解决好铁路建设投融资问题十分迫切。铁路建设不能再靠国家投资单打独斗，必须实现投资主体多元化，广泛吸引社会资本参与。深化铁路投融资体制改革，是贯彻落实党的十八届三中全会精神，发挥市场在资源配置中的决定性作用的一项重要改革，事关铁路改革发展全局，对铁路健康可持续发展具有重要意义。我委深入贯彻国务院《关于改革铁...
+								</p> </a>
+							<a href="41234535264-tId=zhengcefagui.htm"  class="gives" style="font-weight: bold"><span class="sp">·</span>​地方政府性存量债务清理处置办法 (征求意见稿）<span class="time">2015-05-20 </span>
+
+								<p style="font-weight:normal">
+									      
+									第一章 总则
+第一条 制定依据。 为贯彻落实《国务院关于加强地方政府性债务管理的意见》（以下简称《意见》）（国发〔 2014〕43 号），做好地方政府性债务存量债务甄别工作，妥善处理存量债务，特制定本办法。第二条 工作目标。 地方政府性债务存量债务甄别及处置工作的目的，是清理锁定政府债务余额，甄别债务类型，划清偿债责任，化解债务险。第三条 组织领导。 地方各级政府要高度重视，充分认识到做好存量债务清理处置工作的重要性和紧迫性，加强组织领导、制定工作方案、明确责任分工、充实人员力量、强化监督检查，结合本地区、本部门实际认真抓好各项工作落实。各级地方政府应成立由主要负责人任组长，财政部门牵头、发...
+								</p> </a>
+							<a href="2345786888-tId=zhengcefagui.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>2015年地方政府一般债券预算管理办法<span class="time">2015-05-20 </span>
+
+								<p style="font-weight:normal">
+									      
+									第一章 总则
+　　第一条 为规范2015年地方政府一般债券预算管理，根据《预算法》和《国务院关于加强地方政府性债务管理的意见》（国发〔2014〕43号），制定本办法。　　第二条 本办法所称2015年地方政府一般债券，包括为2015年1月1日起新增一般债务发行的新增一般债券、为置换截至2014年12月31日存量一般债务发行的置换一般债券（含为偿还2015年到期的地方政府债券本金发行的一般债券）。　　第三条 省、自治区、直辖市政府（以下简称省级政府）发行的一般债券不得超过国务院确定的本地区一般债券规模。　　第四条 一般债券收入、安排的支出、还本付息、发行费用纳入一般公共预算管理。　　第五条 省、...
+								</p> </a>
+							<a href="63413414123-tId=zhengcefagui.htm" class="gives" style="font-weight: bold"><span class="sp">·</span>国务院关于深化预算管理制度改革的决定<span class="time">2015-05-20 </span>
+
+								<p style="font-weight:normal">
+									      
+									国务院关于深化预算管理制度改革的决定国发〔2014〕45号　　各省、自治区、直辖市人民政府，国务院各部委、各直属机构：　　为贯彻落实党的十八大和十八届三中全会精神，按照新修订的预算法，改进预算管理，实施全面规范、公开透明的预算制度，现就深化预算管理制度改革作出如下决定。　　一、充分认识深化预算管理制度改革的重要性和紧迫性　　建立与实现现代化相适应的现代财政制度，对于优化资源配置、维护市场统一、促进社会公平、实现国家长治久安具有重要意义。改革开放以来，特别是1995年预算法及预算法实施条例施行以来，在党中央、国务院的正确领导下，我国财政制度改革取得显著成效，初步建立了与社会主义市场经济体制相适应...
+								</p> </a>
+					</div>
+				</div>
+
+
+				<div class="right">
+					<p class="title">理财师查询</p>
+
+					<div class="main-info1">
+						<img src="images/ddd.png"  class="ddd" />
+
+						<div class="sss">
+							<span class="s-span s1">姓名</span> <span class="s-span">ID编号</span>
+							<input type="text" class="shu" placeholder="请输入理财师姓名" /> <a href="tfpList.htm" tppabs="http://www.zfax.cn/tfpList" class="searchgo">搜索</a>
+						</div>
+
+
+
+					</div>
+
+				</div>
+				
+			</div>
+			
+			
+			<h1 class="big-banner"> <img src="images/trrgb-longbanner.jpg"  width="1154" height="123" border="0" /> </h1>
+
+			<div class="zjswp">
+				<div class="zjswrap">
+					<div class="huodong">
+						<div class="huodongleft">
+							<h3 class="zxhd">
+								<span class="new_hd">最新活动</span>
+							</h3>
+							<ul class="hdlist">
+									<li><a href="102603-tId=huodongyugao.htm" >
+											<p class="hdlist00">国投信达第二届“政信金融与投资创业精英”分享会在京举办</p> </a>
+
+										<p class="hdlistrq">2016-10-26
+										</p></li>
+									<li><a href="101903-tId=huodongyugao.htm" >
+											<p class="hdlist00">国投信达第一届“政信金融与投资创业精英”分享会在京举办</p> </a>
+
+										<p class="hdlistrq">2016-10-19
+										</p></li>
+									<li><a href="083105-tId=huodongyugao.htm">
+											<p class="hdlist00">国投信达第五届“PPP促进会联盟合伙人招募”说明会在京举办</p> </a>
+
+										<p class="hdlistrq">2016-08-31
+										</p></li>
+							</ul>
+						</div>
+						<div class="huodongright">
+							<h3 class="zxhd">
+								<span class="new_hd">往期活动</span>
+							</h3>
+							<ul class="hdlist">
+									<li><a href="#">
+											<p class="hdlist00">国投信达第九届“PPP促进会联盟合伙人招募”说明会在京举办</p> </a>
+
+										<p class="hdlistrq">2016-10-12
+										</p></li>
+									<li><a href="#">
+											<p class="hdlist00">国投信达“第二届政信金融合伙人创新模式”高峰论坛在京举办</p> </a>
+
+										<p class="hdlistrq">2016-06-08
+										</p></li>
+									<li><a href="#">
+											<p class="hdlist00">第十八届中国北京国际科技产业博览会圆满落幕</p> </a>
+
+										<p class="hdlistrq">2015-05-22
+										</p></li>
+							</ul>
+						</div>
+					</div>
+					<div class="qikan">
+						<div class="qikanlist">
+							<h3 class="zxhd">集团期刊</h3>
+							<ul class="qkone">
+								<li><a href="#"><img src="images/press_01.png"></a></li>
+								<li><a class="qk01" href="#"><img src="images/press_02.png"></a></li>
+								<li><a href="#" class="qk02"><img src="images/press_03.png"></a></li>
+								<li><a href="#" class="qk03"><img src="images/press_04.png"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+		 
+		<script type="text/javascript"></script> 
+		<script type="text/javascript">
+			$(function(){
+				$('.zx_right li').eq(0).addClass('zx_current')
+				$('.zx_right li').mouseover(function(e) {
+					var index=$(this).index();		
+					//先角标
+					$(this).addClass('zx_current').siblings().removeClass();
+					//后图片
+					$('.zx_left li').eq(index).show().siblings().hide();
+					num=index
+				});
+				
+				//制作一个定时器去实现自动播放功能； 定时器模块
+				var timer=null;
+				var num=0;
+				timer=setInterval(autoplay,2000)
+				function autoplay(){
+					num++
+					if(num>8){num=0}
+					$('.zx_right li').eq(num).addClass('zx_current').siblings().removeClass();//角标
+					$('.zx_left li').eq(num).show().siblings().hide();
+				}
+				//鼠标移上停止定时器模块
+				$('.zx_main').hover(function(e) {
+					//停止自动播放，清除定时器；
+					clearInterval(timer)
+				},function(e){
+					clearInterval(timer)
+					timer=setInterval(autoplay,2000)
+				});
+				
+				
+			})
+</script>
+	
+	
+	<div class="fter">
+		<div class="fter0">
+			<div class="ftleft">
+			
+            	<p>全国服务热线</p>
+                <p class="hotphone">400-650-5933</p>
+                <p>客服时间：9:00-18:00(工作日)</p>
+            </div>
+			<div class="ftcenter">
+				<p class="ftcT">
+					<a href="zjs.htm">关于我们</a><a href="#">帮助中心</a><a href="changjianwenti.htm" tppabs="http://www.zfax.cn/changjianwenti">常见问题</a><a target="_blank" href="javascript:if(confirm(%27http://www.huayuguoxin.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.huayuguoxin.com/%27" tppabs="http://www.huayuguoxin.com/">友情链接</a><a href="5.htm" tppabs="http://www.zfax.cn/node/aboutUs/5" class="nomargin">联系我们</a>
+				</p>
+
+				<p class="ftcM">
+					<!-- <a href="#"><script src="aq_auth.js"></script></a> -->
+					<a id="_pinganTrust" target="_blank" href="#"><img src="images/btm_01.png" /></a>
+					<a href="#"><img border="0" src="images/btm_02.png" /></a>
+					<a href="#" target="_blank"><img border="0" src="images/cert_0_2.png" /></a>
+				</p>
+
+				<p class="ftcB">版权所有 © 国投政信（厦门）互联网金融信息服务有限公司 闽ICP备16011247号-1
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256939066'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256939066%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
+			</div>
+			<div class="ftright">
+				<p>
+					<span><img src="images/trrgb-bcode1.jpg" tppabs="http://www.zfax.cn/site/themes/default/images/trrgb-bcode1.jpg" width="97" height="97" /></span><span class="ftr0"><img src="images/trrgb-bcode2.jpg" tppabs="http://www.zfax.cn/site/themes/default/images/trrgb-bcode2.jpg" width="89" height="89" /></span>
+				</p>
+			</div>
+		</div>
+	</div><script type="text/javascript"></script>
+</body>
+</html>
